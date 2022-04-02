@@ -39,3 +39,12 @@
     transform: rotate(360deg);
   }
 }
+.message{
+  display: flex;
+}
+.form_user{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 2em auto;
+}
