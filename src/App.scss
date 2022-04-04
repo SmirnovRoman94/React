@@ -39,3 +39,34 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  background-color: #282c34;
+  height: 80vh;
+  padding: 0 3em;
+  display: flex;
+}
+.chatItem{
+  width: 80vw;
+
+}
+.message{
+  display: flex;
+  color: antiquewhite;
+  justify-content: space-around;
+  .message_author{
+    font-style: italic;
+  }
+}
+.message_header{
+  color: antiquewhite;
+  font-style: italic;
+  border-bottom: 1px solid antiquewhite;
+  width: fit-content;
+  margin: 1em auto;
+}
+.form_user{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
