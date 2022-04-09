@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #282c34;
+  height: 100vh;
 }
 
 .App-logo {
@@ -14,14 +16,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  width: 100%;
+  background-color: #282c34;
 }
 
 .App-link {
@@ -38,4 +40,47 @@
   to {
     transform: rotate(360deg);
   }
+}
+.container{
+  background-color: #282c34;
+  height: 80vh;
+  width: 100%;
+}
+.chatItem{
+  width: 100%;
+
+}
+.message{
+  display: flex;
+  color: antiquewhite;
+  justify-content: space-around;
+  .message_author{
+    font-style: italic;
+  }
+}
+.message_header{
+  color: antiquewhite;
+  font-style: italic;
+  border-bottom: 1px solid antiquewhite;
+  width: fit-content;
+  margin: 1em auto;
+}
+.form_user{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.chate{
+  width: 30%;
+}
+.menu{
+  display: flex;
+  list-style: none;
+
+   li{
+     margin: 0 20px;
+     a{
+       color: #fff;
+     }
+   }
 }
