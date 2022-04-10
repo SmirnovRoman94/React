@@ -1,24 +1,30 @@
 import './App.scss';
-import { LoremIpsum} from 'react-lorem-ipsum';
-import Message from './Message';
+import Router from './pages/Router'
+import {BrowserRouter} from 'react-router-dom'
+import React, { useState } from 'react';
 
-const messageItem = "Lorem ipsum odor amet, consectetuer adipiscing elit. Lobortis libero feugiat semper aliquet eget phasellus. Inceptos fringilla ultrices eu libero cubilia tortor amet. Phasellus habitasse urna maecenas eget suscipit; leo rhoncus. Ultrices habitasse ultricies bibendum diam turpis nostra."
+export const MyThemeContext = React.createContext({ theme: 'dark'})
 
-function App() {
+
+
+
+
+function App(props) {
+  const [theme, setTheme] = useState('dark')
   return (
     <div className="App">
       <header className="App-header">
         <div>
-          <h1>My first App</h1>
+          <h1>Render props</h1>
+          <MyThemeContext.Provider value={{theme: theme, setTheme: setTheme}}>
+            <BrowserRouter>
+              <Router/>
+            </BrowserRouter>
+          </MyThemeContext.Provider>
         </div>
       </header>
-      <div class="container">
-        <LoremIpsum p={3}/>
-        <div class="mes">
-          <Message mes={messageItem}/>
-        </div>
-      </div>
-    </div>
+  </div>
+
   );
 }
 
